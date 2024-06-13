@@ -53,6 +53,9 @@ nav:
     - Terraform:
         - 'terraform/index.md'
         - Basics: 'terraform/bassics.md'
+    - Javascript:
+        - 'javascript/index.md'
+        - Basics: 'javascript/basics.md'
     - About:
       - License: 'about/license.md'
       - External links: 'about/external-links.md'
