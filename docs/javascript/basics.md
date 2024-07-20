@@ -17,6 +17,14 @@ if (day === 'Wednesday') {
 day === 'Wednesday' ? true : false;
 ```
 
+
+## String methods
+
+| Method | Description |
+| - | - |
+| `.split(' ')` | Returns array of words |
+| `.join(' ')` | Returns a string with spaces |
+
 ## Javascript functions
 
 ### Function expressions
@@ -121,3 +129,71 @@ const bigNumbers = numbers.map(number => {
 
 `.map()` works in a similar manner to .forEach()— the major difference is that .map() returns a new array.`
 
+
+## The `.filter()` Method
+
+Another useful iterator method is .filter(). Like .map(), .filter() returns a new array. However, .filter() returns an array of elements after filtering out certain elements from the original array. The callback function for the .filter() method should return true or false depending on the element that is passed to it.
+
+```js
+const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; 
+
+const shortWords = words.filter(word => {
+  return word.length < 6;
+});
+```
+
+## The `.findIndex()` Method
+
+We sometimes want to find the location of an element in an array. That’s where the .findIndex() method comes in! Calling .findIndex() on an array will return the index of the first element that evaluates to true in the callback function.
+
+
+```js
+const jumbledNums = [123, 25, 78, 5, 9]; 
+
+const lessThanTen = jumbledNums.findIndex(num => {
+  return num < 10;
+});
+```
+
+
+## The `.reduce()` Method
+
+Another widely used iteration method is .reduce(). The .reduce() method returns a single value after iterating through the elements of an array, thereby reducing the array. Take a look at the example below:
+
+```js
+const numbers = [1, 2, 4, 10];
+
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+}, 0)
+
+console.log(summedNums) // Output: 17
+```
+
+The .reduce() method can also take an optional second parameter to set an initial value for accumulator (remember, the first argument is the callback function!).
+
+
+## The `.some()` Method
+
+The `.some()` method checks if at least one element in the array passes the test implemented by the provided function. It returns a Boolean value - true if at least one element satisfies the condition, and false otherwise. This method is useful for scenarios where you need to determine the presence of any element that meets certain criteria.
+
+```js
+const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
+
+console.log(words.some(word => {
+  return word.length < 6;
+}));
+```
+
+
+## The `.every()` Method
+
+The `.every()` method checks if all elements in an array pass the test implemented by the provided function. It returns a Boolean value - true if all elements satisfy the condition, and false otherwise. This method is useful when you need to ensure that all elements in an array meet certain criteria.
+
+```js
+const words = ['unique', 'uncanny', 'oxymoron'];
+
+console.log(interestingWords.every((word) => {
+  return word.length > 5;
+} ));
+```

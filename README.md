@@ -42,7 +42,7 @@ Explain all the steps to execute your app. Remember if it's for Linux/mac or win
 
 ```
 # Example of a code snippet
-python code/myapp.py -MyFlags
+python -m mkdocs serve -w overrides
 ```
 
 ## 4. Troubleshooting
